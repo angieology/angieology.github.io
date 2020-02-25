@@ -67,6 +67,8 @@ h3 {
 .banner {
     font-size: 30px;
     padding: 100px 100px 0 100px;
+    display: flex;
+    align-items: center;
 }
 
 .content {
@@ -102,6 +104,7 @@ h3 {
 img {
     height: 40px;
     width: 40px;
+    margin: 0 15px 0 15px;
 }
 footer {
     display: flex;
@@ -112,7 +115,6 @@ footer {
 footer a:link {
     text-decoration: inherit;
     color: inherit;
-    margin-left: 15px;
 }
 
 footer > span {
@@ -135,12 +137,12 @@ footer > span {
     <h3>Software developer</h3>
 </hgroup>
 
-<div class="banner">full-stack software developer since 2015. Toronto</div>
+<div class="banner"><img src="img/build-24px.svg" alt="build icon"/>full-stack software developer since 2015. Toronto</div>
 
 
 <section class="content">
 
-    <div>Interested in startups, scalability, blockchain, AI</div>
+    <div><h3>interested in startups, scalability, blockchain, AI</h3></div>
 
     <div id="summary">
             <h3>Summary</h3>
@@ -154,7 +156,7 @@ footer > span {
     <div id="Projects">
             <h3>Projects</h3>
             <div class="content__projects">
-                Hyperledger demo tutorial here <br/>
+                Hyperledger demo tutorial <br/>
                 React Native shopping cart flow <br/>
                 Ethereum-based Java smart contract tutorial <br/>
                 Coinsale dApp <br/>
