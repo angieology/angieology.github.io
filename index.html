@@ -8,38 +8,32 @@
     body {
         font-family: 'IBM Plex Sans';
     }
-.parallax {
-  /* The image used */
-  background-image: url("img/tutorial.jpg");
 
-  /* Set a specific height */
-  min-height: 90vh; 
+    .parallax {
 
-  /* Create the parallax scrolling effect */
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
+        min-height: 90vh; 
 
-.parallax-2 {
-  /* The image used */
-  background-image: url("img/lecture.jpg");
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
 
-  /* Set a specific height */
-  min-height: 120vh; 
+        position: relative;
 
-  /* Create the parallax scrolling effect */
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+    }
+    .parallax.image-1{
+    background-image: url("img/tutorial.jpg");
 
-  position: relative;
-}
+    }
+
+    .parallax.image-2 {
+    background-image: url("img/lecture.jpg");
+
+    min-height: 100vh; 
+    }
 
 .title {
-    height: 90vh;
+    /* height: 90vh; */
     position: absolute;
     right: 10%;
     top: 30%;
@@ -52,23 +46,20 @@
     align-items: center;
 }
 
-h1, h3 {
+h1, h2 {
     margin: 0;
 }
 
 h1 {
     font-weight: 600;
-   
-
-
 }
-h3 {
+h3, h2 {
     font-weight: 500;
 }
 
 .banner {
     font-size: 30px;
-    padding: 100px 100px 0 100px;
+    padding: 10% 10% 0 10%;
     display: flex;
     align-items: center;
 }
@@ -76,7 +67,7 @@ h3 {
 .content {
     background-color: white;
     font-size: 24px;
-    padding: 100px;
+    padding: 10%;
     padding-left: 50%;
     font-weight: 200;
     /* line-height: 36px; */
@@ -87,20 +78,25 @@ h3 {
 }
 
 .content > div {
-    margin: 60px;
+    margin: 6%;
     transition: all 300ms ease-in-out;
     font-weight: 100;
+   
+
 }
 
-.content > div > h3 {
+
+.content > div > h3, .content > div > h2 {
     transition: all 400ms ease-in-out;
+
+   opacity: .5;
 }
 
 .content > div:hover {
     transform: translateX(-25%) scale(1.1);
     font-weight: 300;
 }
-.content > div:hover > h3 {
+.content > div:hover > h3, .content > div:hover > h2 {
     transform: translateX(-2%) scale(1.05);
 }
 img {
@@ -126,28 +122,80 @@ footer > span {
     justify-content: center;
 }
 
+@media only screen and (max-width: 1024px) {
+ 
+ .content {
+     padding-left: 25%;
+ }
+
+
+ .content > div:hover {
+    transform:  scale(1.1);
+    font-weight: 300;
+}
+.content > div:hover > h3, .content > div:hover > h2  {
+    transform:  translate(20%, -0%);
+}
+
+ footer {
+     flex-direction: column;
+ }
+
+ .image-1 > .title {
+    top: auto;
+    bottom: 0;
+}
+}
+
+@media only screen and (max-width: 500px) {
+     /* remove all transitions */
+ .content {
+     padding-left: 5%;
+ }
+ .content > div:hover {
+    transform:  none;
+    font-weight: 300;
+}
+.content > div:hover > h3, .content > div:hover > h2  {
+    transform:  none;
+}
+.title {
+    font-size: 32px;
+    overflow: hidden;
+    right: auto;
+}
+
+.banner {
+    flex-direction: column-reverse;
+}
+
+
+
+}
 </style>
 </head>
 <body>
 
 
 
-<div class="parallax"></div>
+<div class="parallax image-1">
 
 <hgroup class="title">
     <h1>Angela Lee</h1>
     <h3>Software developer</h3>
 </hgroup>
 
+</div>
+
 <div class="banner"><img src="img/build-24px.svg" alt="build icon"/>full-stack software developer since 2015. Toronto</div>
 
 
 <section class="content">
 
-    <div><h3>interested in startups, scalability, blockchain, AI</h3></div>
+    <div><h3 id="interests" >interested in startups, scalability, blockchain, AI</h3></div>
 
     <div id="summary">
-            <h3>Summary</h3>
+            <h2>Summary</h2>
             <div class="content__summary">
                 Javascript, Node, HTML, UI 4+ years <br/>
                 ReactJS, Angular, MySQL 3+ years <br/>
@@ -156,7 +204,7 @@ footer > span {
             </div>
     </div>
     <div id="Projects">
-            <h3>Projects</h3>
+            <h2>Projects</h2>
             <div class="content__projects">
                 Hyperledger demo tutorial <br/>
                 React Native shopping cart flow <br/>
@@ -169,7 +217,7 @@ footer > span {
 </section>
 
 
-<div class="parallax-2">
+<div class="parallax image-2">
 <hgroup class="title">
         <h1>'Innovation is creativity with a job to do.'</h1>
         <h3>- John Emmerling</h3>
@@ -180,7 +228,7 @@ footer > span {
 
 <section class="content">
     <div id="Community">
-            <h3>Community</h3>
+            <h2>Community</h2>
             <div class="content__community">
                 Organizer and teacher of AVM Workshop, Aion 2019 <br/>
                 Hyperledger demo tutorial, hackathon 2018 <br/>
@@ -190,7 +238,7 @@ footer > span {
     </div>
 
     <div id="Education">
-            <h3>Education</h3>
+            <h2>Education</h2>
             <div class="content__education">
                 Sheridan College, Associate in Software Engineering 2016
             </div>
