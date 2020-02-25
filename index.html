@@ -66,7 +66,7 @@ h3 {
 
 .banner {
     font-size: 30px;
-    padding: 100px;
+    padding: 100px 100px 0 100px;
 }
 
 .content {
@@ -97,8 +97,26 @@ h3 {
 .content > div:hover > h3 {
     transform: translateX(-30%) scale(1.2);
 }
+img {
+    height: 40px;
+    width: 40px;
+}
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+}
 
+footer > a:link {
+    text-decoration: inherit;
+    color: inherit;
+    margin-left: 15px;
+}
 
+footer > a:first-child {
+    margin-right: 20px;
+}
 </style>
 </head>
 <body>
@@ -161,6 +179,12 @@ h3 {
             </div>
     </div>
 </section>
+
+<footer>
+        <img src="img/GitHub-Mark-64px.png" alt="github icon"/><a href="https://github.com/angieology">My github</a>
+    <img src="img/alternate_email-24px.svg" alt="email icon"/><a href="mailto:angelalee.one@gmail.com?Subject=Hello%20there" target="_top">angelalee.one@gmail.com</a>
+</p>
+</footer>
 
 </body>
 </html>
