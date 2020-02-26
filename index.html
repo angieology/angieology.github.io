@@ -5,32 +5,32 @@
 <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,400,600,700&display=swap" rel="stylesheet">
 <style>
 
-    body {
-        font-family: 'IBM Plex Sans';
-    }
+body {
+    font-family: 'IBM Plex Sans';
+}
 
-    .parallax {
+.parallax {
 
-        min-height: 90vh; 
+    min-height: 90vh; 
 
-        background-attachment: fixed;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 
-        position: relative;
+    position: relative;
 
-    }
-    .parallax.image-1{
+}
+.parallax.image-1{
     background-image: url("img/tutorial.jpg");
 
-    }
+}
 
-    .parallax.image-2 {
+.parallax.image-2 {
     background-image: url("img/lecture.jpg");
 
     min-height: 100vh; 
-    }
+}
 
 .title {
     /* height: 90vh; */
@@ -75,9 +75,12 @@ h3, h2 {
     font-size: 24px;
     padding: 10%;
     font-weight: 200;
-    /* line-height: 36px; */
+    line-height: 36px;
 }
 
+.content:first-child {
+    padding-top: 0;
+};
 
 .content > div {
     margin: 6%;
@@ -91,15 +94,22 @@ h3, h2 {
     transform: translateX(-55px);
    opacity: .5;
 }
-.content > div:hover .highlight, .parallax:hover .title__highlight {
+
+/* paragraph highlight animation */
+.content > div:hover .highlight, .parallax:hover .title__highlight,
+.content > div:active .highlight, .parallax:active .title__highlight  {
    background-position: -100% 0;
 }
-
-.content > div:hover {
+/* paragraph animate */
+.content > div:hover,
+.content > div:active {
     transform: translateX(-25%) scale(1.1);
     font-weight: 300;
 }
-.content > div:hover > h3, .content > div:hover > h2 {
+
+/* paragraph title animate */
+.content > div:hover > h3, .content > div:hover > h2,
+.content > div:active > h3, .content > div:active > h2 {
     transform: translateX(0) scale(1.05);
 }
 
@@ -156,12 +166,13 @@ footer > span {
             background-position: 10% 0%;
         }
 
-        .content > div:hover {
+        .content > div:hover, .content > div:active {
             transform:  scale(1.1);
             font-weight: 300;
         
         }
-        .content > div:hover > h3, .content > div:hover > h2  {
+        .content > div:hover > h3, .content > div:hover > h2, 
+        .content > div:active > h3, .content > div:active > h2  {
             transform:  translate(20%, -0%);
         }
 
@@ -185,11 +196,12 @@ footer > span {
     .content > div {
         padding-left: 5%;
     }
-    .content > div:hover {
+    .content > div:hover,  .content > div:active {
         transform:  none;
         font-weight: 300;
     }
-    .content > div:hover > h3, .content > div:hover > h2  {
+    .content > div:hover > h3, .content > div:hover > h2,
+    .content > div:active > h3, .content > div:active > h2   {
         transform:  none;
     }
     .title {
@@ -223,7 +235,8 @@ footer > span {
     <p class="subbanner">
         /* </br>
         * interested in startups, <br/>
-        * scalability, blockchain, AI <br/>
+        * scalability, <br/>
+        * blockchain, AI <br/>
         */
     </p>
 </div>
