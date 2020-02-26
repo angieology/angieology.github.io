@@ -44,6 +44,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    max-width: 100vw;
+    word-wrap: break-word;
 }
 
 h1, h2 {
@@ -83,15 +86,13 @@ h3, h2 {
     padding-left: 50%;
 }
 
-
 .content > div > h3, .content > div > h2 {
     transition: all 400ms ease-in-out;
-
+    transform: translateX(-55px);
    opacity: .5;
 }
-.content > div:hover .highlight, .title:hover .highlight {
+.content > div:hover .highlight, .parallax:hover .title__highlight {
    background-position: -100% 0;
-   color: black;
 }
 
 .content > div:hover {
@@ -99,7 +100,7 @@ h3, h2 {
     font-weight: 300;
 }
 .content > div:hover > h3, .content > div:hover > h2 {
-    transform: translateX(-2%) scale(1.05);
+    transform: translateX(0) scale(1.05);
 }
 
 .highlight {
@@ -108,9 +109,15 @@ h3, h2 {
   background-position: 0 0;
   display: inline;
   transition: .5s ease-in-out;
-
 }
 
+.title__highlight {
+    background: linear-gradient(to right, rgba(255,255,255,0) 50%, rgba(163, 50, 255, 0.199) 50%);
+    background-size: 200%;
+  background-position: 0 0;
+  display: inline;
+  transition: .5s ease-in-out;
+}
 
 img {
     height: 40px;
@@ -141,16 +148,19 @@ footer > span {
             padding-left: 25%;
         }
 
+        .parallax.image-1 {
+            background-size: 150vw;
+        }
+
         .parallax.image-2 {
-                background-position: 10% 0%;
-            }
+            background-position: 10% 0%;
+        }
 
         .content > div:hover {
             transform:  scale(1.1);
             font-weight: 300;
         
         }
-
         .content > div:hover > h3, .content > div:hover > h2  {
             transform:  translate(20%, -0%);
         }
@@ -167,10 +177,10 @@ footer > span {
 
 
 @media only screen and (max-width: 500px) {
-    .parallax.image-1 {
-        background-position: 10% 0%;
-    }
-  
+    .parallax.image-2 {
+            background-size: 280vw;
+            
+        }
      /* remove all transitions */
     .content > div {
         padding-left: 5%;
@@ -203,7 +213,7 @@ footer > span {
 
 <hgroup class="title">
     <h1>Angela Lee</h1>
-    <h3>Software_Developer</h3>
+    <h3>*.software developer</h3>
 </hgroup>
 
 </div>
@@ -246,7 +256,7 @@ footer > span {
 
 <div class="parallax image-2">
 <hgroup class="title">
-        <h1>'Innovation is <span class="highlight">creativity</span> with a job to do.'</h1>
+        <h1><span class="title__highlight">'Innovation is creativity with a job to do.'</span></h1>
         <h3>- John Emmerling</h3>
     </hgroup>
 
