@@ -20,6 +20,9 @@ body {
 
     position: relative;
 
+    display: flex;
+    align-items: center;    
+
 }
 .parallax.image-1{
     background-image: url("img/tutorial.jpg");
@@ -33,10 +36,8 @@ body {
 }
 
 .title {
-    /* height: 90vh; */
-    position: absolute;
+
     right: 10%;
-    top: 30%;
     font-size: 56px;
   
     color: white;
@@ -49,12 +50,17 @@ body {
     word-wrap: break-word;
 }
 
+
 h1, h2 {
     margin: 0;
 }
 
 h1 {
     font-weight: 600;
+}
+
+h3 { 
+    margin: 0;
 }
 h3, h2 {
     font-weight: 500;
@@ -65,10 +71,6 @@ h3, h2 {
     padding: 10% 10% 0 10%;
 }
 
-.subbanner {
-    font-weight: regular;
-    opacity: 0.3;
-}
 
 .content {
     background-color: white;
@@ -81,12 +83,12 @@ h3, h2 {
     margin: 6%;
     transition: all 300ms ease-in-out;
     font-weight: 100;
-    padding-left: 50%;
+    padding-left: 40%;
 }
 
 .content > div > h3, .content > div > h2 {
-    transition: all 400ms ease-in-out;
-    transform: translateX(-25px);
+    /* transition: all 400ms ease-in-out;
+    transform: translateX(-25px); */
     opacity: .5;
 }
 
@@ -96,17 +98,17 @@ h3, h2 {
    background-position: -100% 0;
 }
 /* paragraph animate */
-.content > div:hover,
+/* .content > div:hover,
 .content > div:active {
     transform: translateX(-25%) scale(1.1);
     font-weight: 300;
-}
+} */
 
 /* paragraph title animate */
-.content > div:hover > h3, .content > div:hover > h2,
+/* .content > div:hover > h3, .content > div:hover > h2,
 .content > div:active > h3, .content > div:active > h2 {
     transform: translateX(0) scale(1.05);
-}
+} */
 
 .highlight {
   background: linear-gradient(to right, rgba(255,255,255,0) 50%, rgb(255, 252, 50) 50%);
@@ -161,15 +163,15 @@ footer > span {
             background-position: 10% 0%;
         }
 
-        .content > div:hover, .content > div:active {
+        /* .content > div:hover, .content > div:active {
             transform:  scale(1.1);
             font-weight: 300;
         
-        }
-        .content > div:hover > h3, .content > div:hover > h2, 
+        } */
+        /* .content > div:hover > h3, .content > div:hover > h2, 
         .content > div:active > h3, .content > div:active > h2  {
             transform:  translate(20%, -0%);
-        }
+        } */
 
         footer {
             flex-direction: column;
@@ -226,39 +228,32 @@ footer > span {
 
 <hgroup class="title">
     <h1>Angela Lee</h1>
-    <h3>software developer</h3>
+    <h3>_software developer</h3>
 </hgroup>
 
 </div>
 
 <div class="banner">
     // full-stack software developer since 2015. Toronto
-    <p class="subbanner">
-        /* </br>
-        * interested in startups, <br/>
-        * scalability, <br/>
-        * blockchain, AI <br/>
-        */
-    </p>
 </div>
 
 <section class="content">
-
+<!-- 
 
     <div id="summary">
-            <h2>#Summary</h2>
+            <h2>Summary</h2>
             <div class="content__summary highlight">
                 Javascript, Node, HTML, UI 4+ years <br/>
                 ReactJS, Angular, MySQL 3+ years <br/>
                 C#, .NET, Solidity 2+ years <br/>
                 MongoDB, Python, Java 1+ years
             </div>
-    </div>
+    </div> -->
     <div id="Projects">
-            <h2>#Projects</h2>
+            <h2>Projects</h2>
             <div class="content__projects highlight">
                 Hyperledger demo tutorial <br/>
-                React Native shopping cart flow <br/>
+                React Native shopping cart <br/>
                 Ethereum-based Java smart contract tutorial <br/>
                 Coinsale dApp <br/>
                 Currency Exchange Reader <br/>
@@ -269,7 +264,7 @@ footer > span {
 
 
 <div class="parallax image-2">
-<hgroup class="title">
+<hgroup class="title quote">
         <h1><span class="title__highlight">'Innovation is creativity with a job to do.'</span></h1>
         <h3>- John Emmerling</h3>
     </hgroup>
@@ -279,7 +274,7 @@ footer > span {
 
 <section class="content">
     <div id="Community">
-            <h2>#Community</h2>
+            <h2>Community</h2>
             <div class="content__community highlight">
                 Organizer and teacher of AVM Workshop, Aion 2019 <br/>
                 Hyperledger demo tutorial, Block Hack 2018 <br/>
@@ -290,7 +285,7 @@ footer > span {
     </div>
 
     <div id="Education">
-            <h2>#Education</h2>
+            <h2>Education</h2>
             <div class="content__education highlight">
                 Sheridan College, Associate in Software Engineering 2016
             </div>
