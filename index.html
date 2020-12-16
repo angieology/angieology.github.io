@@ -21,17 +21,21 @@ body {
     position: relative;
 
     display: flex;
-    align-items: center;    
+
 
 }
 .parallax.image-1{
     background-image: url("img/tutorial.jpg");
-
+    justify-content: flex-end;
+    align-items: flex-end;
+    
 }
 
 .parallax.image-2 {
     background-image: url("img/lecture.jpg");
 
+    display: flex;
+    align-items: center;
     min-height: 100vh; 
 }
 
@@ -39,24 +43,50 @@ body {
 
     right: 10%;
     font-size: 56px;
-  
+    word-wrap: break-word;
     color: white;
 
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-end;
 
     max-width: 100vw;
-    word-wrap: break-word;
+    margin: 40px;
+   
+    width: 100%;
+
 }
 
+/* pretty border */
+.gradient-border {
+    border-style: solid;
+    border-width: 0;
+    border-image: linear-gradient(to right, purple, yellow, green) 1;
+}
+
+.border-corner-bottom {
+    padding: 0 0 20px 20px;
+    border-left-width: 10px;
+    border-bottom-width: 10px;
+}
+
+.border-corner-top {
+    padding: 20px 0 0 20px;
+    border-left-width: 10px;
+    border-top-width: 10px;
+}
+
+.border-top {
+    padding-top: 20px;
+    border-top-width: 8px;
+}
 
 h1, h2 {
     margin: 0;
 }
 
 h1 {
-    font-weight: 600;
+    font-weight: 500;
 }
 
 h3 { 
@@ -77,6 +107,8 @@ h3, h2 {
     font-size: 24px;
     font-weight: 200;
     line-height: 36px;
+
+    height: 100vh;
 }
 
 .content > div {
@@ -135,6 +167,9 @@ footer {
     display: flex;
     justify-content: center;
     padding: 50px;
+
+    width: fit-content;
+    margin: auto;
 }
 
 footer a:link {
@@ -183,9 +218,27 @@ footer > span {
         }
 }
 
+@media only screen and (max-width: 767px) {
+    h1 {
+        font-size: 48px;
+    }
+    h3 {
+        font-size: 38px;
+    }
+    .content {
+        font-size: 24px;
+    }
+}
+
 
 @media only screen and (max-width: 500px) {
 
+    h1 {
+        font-size: 42px;
+    }
+    h3 {
+        font-size: 32px;
+    }
     .parallax.image-1{
         background-image: url("img/tutorial-small.jpg");
     }
@@ -194,6 +247,9 @@ footer > span {
         background-image: url("img/lecture-small.jpg");
         background-size: 280vw;
     
+    }
+    .content {
+        font-size: 18px;
     }
      /* remove all transitions */
     .content > div {
@@ -215,6 +271,10 @@ footer > span {
 
     .banner {
         flex-direction: column-reverse;
+        font-size: 22px;
+    }
+    footer {
+        padding: 0 0 20px 0;
     }
 
 }
@@ -226,38 +286,37 @@ footer > span {
 
 <div class="parallax image-1">
 
-<hgroup class="title">
+<hgroup class="title gradient-border border-corner-bottom ">
     <h1>Angela Lee</h1>
-    <h3>_software developer</h3>
+    <h3>software developer</h3>
 </hgroup>
 
 </div>
 
 <div class="banner">
-    // full-stack software developer since 2015. Toronto
+    Full-stack software developer since 2015. Toronto
 </div>
 
 <section class="content">
-<!-- 
-
-    <div id="summary">
-            <h2>Summary</h2>
-            <div class="content__summary highlight">
-                Javascript, Node, HTML, UI 4+ years <br/>
-                ReactJS, Angular, MySQL 3+ years <br/>
-                C#, .NET, Solidity 2+ years <br/>
-                MongoDB, Python, Java 1+ years
+<div id="summary">
+            <h2>Skills</h2>
+            <div class="content__summary">
+                 <span class="highlight">Javascript,</span> Node, CSS, UI 4+ years <br/>
+                 React, Express, Angular 3+ years <br/>
+                 Docker, MongoDB, <span class="highlight">Solidity,</span> MySQL 2+ years <br/>
+                 Animation, Angular, Typescript, <span class="highlight">GraphQL,</span> C#, .NET 1+ years
             </div>
-    </div> -->
+    </div>
     <div id="Projects">
             <h2>Projects</h2>
-            <div class="content__projects highlight">
+            <div class="content__projects">
+                Non-fungible token auction dApp <br/>
                 Hyperledger demo tutorial <br/>
-                React Native shopping cart <br/>
-                Ethereum-based Java smart contract tutorial <br/>
+                <span class="highlight">React Native </span>shopping cart <br/>
+                Ethereum-based Java <span class="highlight">smart contract</span> tutorial <br/>
                 Coinsale dApp <br/>
                 Currency Exchange Reader <br/>
-                K-Nearest-Neighbours ML implementation <br/>
+                <span class="highlight">K-Nearest-Neighbours</span> ML implementation <br/>
             </div>
     </div>
 </section>
@@ -275,24 +334,24 @@ footer > span {
 <section class="content">
     <div id="Community">
             <h2>Community</h2>
-            <div class="content__community highlight">
-                Organizer and teacher of AVM Workshop, Aion 2019 <br/>
-                Hyperledger demo tutorial, Block Hack 2018 <br/>
+            <div class="content__community ">
+                <span class="highlight">Organizer and teacher</span> of AVM Workshop, Aion 2019 <br/>
+                Hyperledger demo tutorial, <span class="highlight">Block Hack 2018</span> <br/>
                 Nobul Blockchain Hackathon Organizer & Team Lead 2018 </br>
-                Intro to Web development class at SheHacks 2018 <br/>
+                <span class="highlight">Intro to Web development</span> class at SheHacks 2018 <br/>
                 Participant in CryptoChicks Hackathon 2018
             </div>
     </div>
 
     <div id="Education">
             <h2>Education</h2>
-            <div class="content__education highlight">
-                Sheridan College, Associate in Software Engineering 2016
+            <div class="content__education ">
+                Sheridan College, <span class="highlight">Associate in Software Engineering</span> 2016
             </div>
     </div>
 </section>
 
-<footer>
+<footer class="gradient-border border-top">
         <span class="footer__item">
                 <img src="img/GitHub-Mark-64px.png" alt="github icon"/><a href="https://github.com/angieology">My github</a>
   
